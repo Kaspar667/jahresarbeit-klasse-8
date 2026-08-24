@@ -1,0 +1,9 @@
+# ESP-IDF Build-Artefakte (im Submodul)
+build/
+sdkconfig.old
+
+# macOS
+.DS_Store
+
+# grosse externe Werkzeugkiste, falls jemand ESP-IDF hier ablegt
+esp-idf/

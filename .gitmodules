@@ -1,0 +1,4 @@
+[submodule "02-esp-fly/esp-drone"]
+	path = 02-esp-fly/esp-drone
+	url = https://github.com/spieker/esp-drone.git
+	branch = jahresarbeit-klasse-8
