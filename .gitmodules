@@ -2,3 +2,7 @@
 	path = 02-esp-fly/esp-drone
 	url = https://github.com/spieker/esp-drone.git
 	branch = jahresarbeit-klasse-8
+[submodule "02-esp-fly/esp-idf"]
+	path = 02-esp-fly/esp-idf
+	url = https://github.com/espressif/esp-idf.git
+	branch = release/v5.0

@@ -10,35 +10,31 @@ zu verstehen, anzupassen und auf die Drohne zu spielen**.
 - **`esp-drone/`** — die Firmware als **Git-Submodul** auf unseren Fork
   [`spieker/esp-drone`](https://github.com/spieker/esp-drone), Branch
   `jahresarbeit-klasse-8`. Hier stehen unsere board-spezifischen Anpassungen.
+- **`esp-idf/`** — die Bau-Umgebung von Espressif als **Git-Submodul**,
+  fest auf **v5.0** gepinnt (die Version, mit der es funktioniert).
 - **`flash.sh`** — spielt die gebaute Firmware auf die Drohne (per USB).
+- **`BUILD.md`** — die ausführliche Schritt-für-Schritt-Anleitung.
 
-## Voraussetzung: ESP-IDF v5.0
+## Kurzanleitung
 
-Die Firmware wird mit **ESP-IDF v5.0** gebaut (die Entwicklungsumgebung von
-Espressif). Sie ist bewusst *nicht* Teil dieses Projekts, weil sie sehr groß ist
-(~1,7 GB) und eine externe Werkzeugkiste ist. Installation:
-
-```bash
-mkdir -p ~/esp && cd ~/esp
-git clone -b release/v5.0 --recursive https://github.com/espressif/esp-idf.git
-cd esp-idf && ./install.sh esp32s3
-```
-
-`flash.sh` findet ESP-IDF automatisch unter `~/esp/esp-idf` oder über die
-Umgebungsvariable `IDF_PATH`.
-
-## Firmware bauen und flashen
+Ausführlich in **[BUILD.md](BUILD.md)**. In Kürze:
 
 ```bash
-# einmalig, im Firmware-Ordner:
+# 1. Projekt inkl. Submodule holen (falls noch nicht geschehen)
+git submodule update --init --recursive     # laedt esp-drone + esp-idf (~1,7 GB)
+
+# 2. ESP-IDF einmalig einrichten
+cd esp-idf && ./install.sh esp32s3 && cd ..
+
+# 3. Firmware bauen
 cd esp-drone
-. ~/esp/esp-idf/export.sh        # ESP-IDF laden
+. ../esp-idf/export.sh
 idf.py set-target esp32s3        # zieht die ESP-FLY-Pins aus sdkconfig.defaults.esp32s3
-idf.py build                     # baut die Firmware
-
-# Drohne per USB anstecken, dann aus dem esp-fly-Ordner:
+idf.py build
 cd ..
-./flash.sh                       # findet den Port automatisch
+
+# 4. Drohne per USB anstecken, dann flashen
+./flash.sh                       # findet ESP-IDF und Port automatisch
 ```
 
 Zum Fliegen: Handy ins WLAN `ESP-DRONE_...` (Passwort `12345678`), dann die

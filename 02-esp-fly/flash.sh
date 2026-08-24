@@ -5,9 +5,13 @@
 set -euo pipefail
 HERE="$(cd "$(dirname "$0")" && pwd)"
 
-# ESP-IDF v5.0 finden: IDF_PATH, sonst ~/esp/esp-idf
-IDF="${IDF_PATH:-$HOME/esp/esp-idf}"
-[ -f "$IDF/export.sh" ] || { echo "ESP-IDF v5.0 nicht gefunden unter '$IDF'. Setze IDF_PATH."; exit 1; }
+# ESP-IDF v5.0 finden: lokales Submodul, sonst IDF_PATH, sonst ~/esp/esp-idf
+IDF=""
+for cand in "$HERE/esp-idf" "${IDF_PATH:-}" "$HOME/esp/esp-idf"; do
+  if [ -n "$cand" ] && [ -f "$cand/export.sh" ]; then IDF="$cand"; break; fi
+done
+[ -n "$IDF" ] || { echo "ESP-IDF v5.0 nicht gefunden. Submodul holen (git submodule update --init --recursive 02-esp-fly/esp-idf) oder IDF_PATH setzen."; exit 1; }
+echo "ESP-IDF: $IDF"
 . "$IDF/export.sh" >/dev/null 2>&1
 
 PORT="${1:-$(ls /dev/cu.usbmodem* 2>/dev/null | head -1 || true)}"
