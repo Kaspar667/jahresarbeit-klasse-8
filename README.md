@@ -15,7 +15,7 @@ Stufen — von einfach zu komplex:
 |--------:|---------|--------|------|
 | 1 | Holz-Bausatz (Amazon) | [`01-holzbausatz/`](01-holzbausatz/) | Erste Erfahrungen: Zusammenbau, Motoren, Propeller, Fliegen lernen |
 | 2 | ESP-FLY (ESP32-S3) | [`02-esp-fly/`](02-esp-fly/) | Eigene Flugsoftware verstehen: Firmware bauen, flashen, Sensor & Steuerung |
-| 3 | Kamera-Drohne | [`03-kamera-drohne/`](03-kamera-drohne/) | Vollständige Drohne mit Kamera als Abschlusswerk |
+| 3 | Eigenbau-Drohne | [`03-kamera-drohne/`](03-kamera-drohne/) | Selbst entworfen: gefräster Kohlefaserrahmen, eigene Trägerplatine, bürstenlose Motoren |
 
 ## Ordnerstruktur
 
@@ -27,6 +27,13 @@ jahresarbeit-drohne/
 ├── 02-esp-fly/            ← Schritt 2 (enthält Firmware als Git-Submodul)
 └── 03-kamera-drohne/      ← Schritt 3
 ```
+
+## Stand (25.09.2026)
+
+Schritt 1 und 2 sind gebaut und geflogen. Schritt 3 ist **durchgeplant**: Auslegung,
+Antrieb, Elektronik und die eigene Trägerplatine sind entschieden und begründet, Motoren
+und Regler bestellt. Gebaut ist davon noch nichts — die Kapitel in
+[`03-kamera-drohne/`](03-kamera-drohne/) halten fest, *warum* welches Teil gewählt wurde.
 
 ## Schriftliche Arbeit
 

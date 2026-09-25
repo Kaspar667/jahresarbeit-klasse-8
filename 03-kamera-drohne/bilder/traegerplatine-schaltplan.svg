@@ -1,0 +1,141 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1340 980" width="1340" height="980">
+<defs><marker id="ar" markerWidth="9" markerHeight="9" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#333"/></marker></defs>
+<rect width="1340" height="980" fill="#fbfbf9"/>
+<text x="40" y="46" font-family="Helvetica,Arial,sans-serif" font-size="25" font-weight="bold" font-style="normal" fill="#111" text-anchor="start">Trägerplatine  XIAO ESP32-S3  →  HAKRC 15A 4-in-1</text>
+<text x="40" y="72" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="normal" font-style="normal" fill="#555" text-anchor="start">Schaltplan V1 · Jahresarbeit Quadrocopter · 23.09.2026</text>
+<rect x="40" y="100" width="1260" height="120" rx="6" fill="#f4efe6" stroke="#b08a54" stroke-width="2" stroke-dasharray="8 5"/>
+<text x="58" y="126" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#8a6423" text-anchor="start">LEISTUNGSPFAD — läuft NICHT über die Trägerplatine (im Vollgas ~36 A)</text>
+<rect x="70" y="140" width="150" height="60" rx="6" fill="#ffffff" stroke="#222" stroke-width="2"/>
+<text x="145" y="165" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" font-style="normal" fill="#111" text-anchor="middle">2S-Akku</text>
+<text x="145" y="184" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">2x 18650, 7,4 V</text>
+<line x1="220" y1="170" x2="300" y2="170" stroke="#c0392b" stroke-width="3" marker-end="url(#ar)"/>
+<text x="260" y="161" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#c0392b" text-anchor="middle">XT30</text>
+<rect x="300" y="140" width="210" height="60" rx="6" fill="#ffffff" stroke="#222" stroke-width="2"/>
+<text x="405" y="165" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" font-style="normal" fill="#111" text-anchor="middle">HAKRC 15A 4-in-1</text>
+<text x="405" y="184" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">BAT+ / BAT− / S1–S4</text>
+<line x1="510" y1="170" x2="600" y2="170" stroke="#333" stroke-width="3" marker-end="url(#ar)"/>
+<text x="555" y="161" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">3 Phasen</text>
+<rect x="600" y="140" width="150" height="60" rx="6" fill="#ffffff" stroke="#222" stroke-width="2"/>
+<text x="675" y="165" font-family="Helvetica,Arial,sans-serif" font-size="14" font-weight="bold" font-style="normal" fill="#111" text-anchor="middle">4x Motor 1204</text>
+<text x="675" y="184" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">6500 KV</text>
+<text x="790" y="163" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="start">C1 = 470 µF / 25 V, Low-ESR</text>
+<text x="790" y="182" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#555" text-anchor="start">direkt an die Akkupads des Reglers — nicht auf unsere Platine</text>
+<polyline points="390,200 390,236 165,236 165,308" fill="none" stroke="#c0392b" stroke-width="2.5" marker-end="url(#ar)"/>
+<text x="180" y="230" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#c0392b" text-anchor="start">VBAT 6,0–8,4 V · dünnes Aderpaar, wenige hundert mA</text>
+<rect x="40" y="258" width="1260" height="552" rx="6" fill="#ffffff" stroke="#2b6ca3" stroke-width="2" stroke-dasharray="9 6"/>
+<text x="58" y="284" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#2b6ca3" text-anchor="start">TRÄGERPLATINE · einseitig gefräst · ca. 40 x 40 mm · Lochbild 20x20 mm M2</text>
+<rect x="70" y="308" width="190" height="76" rx="6" fill="#fdf6ec" stroke="#d98200" stroke-width="2"/>
+<text x="165" y="334" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#111" text-anchor="middle">U4  Abwärtsregler</text>
+<text x="165" y="353" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">5,0 V fest, ≥ 500 mA</text>
+<text x="165" y="371" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">D24V5F5 o. MP1584</text>
+<line x1="260" y1="346" x2="300" y2="346" stroke="#d98200" stroke-width="2.5"/>
+<polygon points="300,336 300,356 318,346" fill="none" stroke="#d98200" stroke-width="2.5"/>
+<line x1="318" y1="336" x2="318" y2="356" stroke="#d98200" stroke-width="2.5"/>
+<text x="309" y="382" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" font-style="normal" fill="#d98200" text-anchor="middle">D1 SS14</text>
+<polyline points="318,346 438,346 438,382 470,382" fill="none" stroke="#d98200" stroke-width="2.5"/>
+<text x="345" y="339" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#d98200" text-anchor="start">+5V_MCU</text>
+<rect x="470" y="300" width="250" height="400" rx="6" fill="#eef4fb" stroke="#1f5fa8" stroke-width="2.5"/>
+<text x="595" y="330" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" font-style="normal" fill="#111" text-anchor="middle">U1  XIAO ESP32-S3</text>
+<text x="595" y="349" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">auf Buchsenleisten, steckbar</text>
+<text x="482" y="387" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="start">5V</text>
+<text x="482" y="417" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="start">GND</text>
+<text x="482" y="447" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="start">3V3</text>
+<text x="482" y="477" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="start">D9</text>
+<line x1="470" y1="412" x2="432" y2="412" stroke="#111" stroke-width="2"/>
+<text x="427" y="416" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#111" text-anchor="end">GND</text>
+<line x1="470" y1="442" x2="432" y2="442" stroke="#1e8449" stroke-width="2"/>
+<text x="427" y="446" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#1e8449" text-anchor="end">3V3</text>
+<text x="708" y="377" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="end">D0</text>
+<line x1="720" y1="372" x2="758" y2="372" stroke="#1f5fa8" stroke-width="2"/>
+<text x="764" y="376" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#1f5fa8" text-anchor="start">M1_SIG</text>
+<text x="708" y="401" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="end">D1</text>
+<line x1="720" y1="396" x2="758" y2="396" stroke="#1f5fa8" stroke-width="2"/>
+<text x="764" y="400" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#1f5fa8" text-anchor="start">M2_SIG</text>
+<text x="708" y="425" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="end">D3</text>
+<line x1="720" y1="420" x2="758" y2="420" stroke="#1f5fa8" stroke-width="2"/>
+<text x="764" y="424" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#1f5fa8" text-anchor="start">M3_SIG</text>
+<text x="708" y="449" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="end">D8</text>
+<line x1="720" y1="444" x2="758" y2="444" stroke="#1f5fa8" stroke-width="2"/>
+<text x="764" y="448" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#1f5fa8" text-anchor="start">M4_SIG</text>
+<text x="708" y="483" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="end">D4</text>
+<line x1="720" y1="478" x2="758" y2="478" stroke="#1e8449" stroke-width="2"/>
+<text x="764" y="482" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#1e8449" text-anchor="start">I2C_SDA</text>
+<text x="708" y="507" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="end">D5</text>
+<line x1="720" y1="502" x2="758" y2="502" stroke="#1e8449" stroke-width="2"/>
+<text x="764" y="506" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#1e8449" text-anchor="start">I2C_SCL</text>
+<text x="708" y="541" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="end">D7</text>
+<line x1="720" y1="536" x2="758" y2="536" stroke="#1f5fa8" stroke-width="2"/>
+<text x="764" y="540" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#1f5fa8" text-anchor="start">RX_IN (CRSF)</text>
+<text x="708" y="565" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="end">D6</text>
+<line x1="720" y1="560" x2="758" y2="560" stroke="#1f5fa8" stroke-width="2"/>
+<text x="764" y="564" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#1f5fa8" text-anchor="start">RX_OUT (Telemetrie)</text>
+<text x="708" y="599" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="end">D10</text>
+<line x1="720" y1="594" x2="758" y2="594" stroke="#1f5fa8" stroke-width="2"/>
+<text x="764" y="598" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#1f5fa8" text-anchor="start">BUZZ_CTL</text>
+<text x="708" y="623" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="end">D2</text>
+<line x1="720" y1="618" x2="758" y2="618" stroke="#555" stroke-width="2"/>
+<text x="764" y="622" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="start">GPS_RX (Reserve)</text>
+<rect x="900" y="352" width="190" height="96" rx="6" fill="#eef4fb" stroke="#1f5fa8" stroke-width="2"/>
+<text x="995" y="378" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#111" text-anchor="middle">J2 → Regler</text>
+<text x="995" y="397" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">S1 S2 S3 S4 + GND</text>
+<text x="995" y="415" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">I_SENSE auf Messpad</text>
+<text x="995" y="435" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="italic" fill="#1f5fa8" text-anchor="middle">DShot300 · 3,3 V Logik</text>
+<line x1="862" y1="372" x2="900" y2="372" stroke="#1f5fa8" stroke-width="2"/>
+<line x1="862" y1="396" x2="900" y2="396" stroke="#1f5fa8" stroke-width="2"/>
+<line x1="862" y1="420" x2="900" y2="420" stroke="#1f5fa8" stroke-width="2"/>
+<line x1="862" y1="444" x2="900" y2="444" stroke="#1f5fa8" stroke-width="2"/>
+<polyline points="995,352 995,244 420,244 420,200" fill="none" stroke="#1f5fa8" stroke-width="2" marker-end="url(#ar)" stroke-dasharray="6 4"/>
+<text x="700" y="238" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#1f5fa8" text-anchor="middle">vier Signalleitungen zurück zum Regler</text>
+<rect x="900" y="462" width="190" height="60" rx="6" fill="#eefaf1" stroke="#1e8449" stroke-width="2"/>
+<text x="995" y="486" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#111" text-anchor="middle">U2  MPU-6050</text>
+<text x="995" y="505" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">Kreisel · I2C 0x68</text>
+<rect x="900" y="534" width="190" height="58" rx="6" fill="#eefaf1" stroke="#1e8449" stroke-width="2"/>
+<text x="995" y="557" font-family="Helvetica,Arial,sans-serif" font-size="13" font-weight="bold" font-style="normal" fill="#111" text-anchor="middle">U3  BMP280</text>
+<text x="995" y="576" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">Barometer · I2C 0x76</text>
+<polyline points="862,478 880,478 880,492 900,492" fill="none" stroke="#1e8449" stroke-width="2"/>
+<polyline points="862,502 872,502 872,564 900,564" fill="none" stroke="#1e8449" stroke-width="2"/>
+<rect x="900" y="604" width="190" height="58" rx="6" fill="#eef4fb" stroke="#1f5fa8" stroke-width="2"/>
+<text x="995" y="627" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#111" text-anchor="middle">J3  ELRS-Empfänger</text>
+<text x="995" y="646" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">5V · GND · TX · RX</text>
+<polyline points="862,536 886,536 886,620 900,620" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+<polyline points="862,560 878,560 878,636 900,636" fill="none" stroke="#1f5fa8" stroke-width="2"/>
+<text x="900" y="690" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="start">Versorgung: U2 und U3 an 3V3 des XIAO (läuft auch nur mit USB),</text>
+<text x="900" y="706" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="start">J3 am 5-V-Netz · gemeinsame Masse für alles</text>
+<rect x="1130" y="352" width="170" height="310" rx="6" fill="#fcf7f7" stroke="#a33" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="1215" y="378" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#a33" text-anchor="middle">Detail B: Summer</text>
+<text x="1215" y="400" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">D10 → R3 100 Ω → Gate Q1</text>
+<text x="1215" y="417" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">R4 10 kΩ Gate → GND</text>
+<text x="1215" y="434" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">(kein Piepsen beim Start)</text>
+<text x="1215" y="451" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">Q1 = 2N7002, low-side</text>
+<text x="1215" y="468" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">BZ1 aktiv, 5 V</text>
+<text x="1215" y="505" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" font-style="normal" fill="#a33" text-anchor="middle">SJ1: Lötbrücke</text>
+<text x="1215" y="523" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">D10 → Summer  ODER</text>
+<text x="1215" y="538" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">D10 → GPS-TX (später)</text>
+<text x="1215" y="568" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" font-style="normal" fill="#a33" text-anchor="middle">J4: GPS-Pads</text>
+<text x="1215" y="586" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">unbestückt · 5V GND RX TX</text>
+<text x="1215" y="616" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" font-style="normal" fill="#a33" text-anchor="middle">TP1–TP5 Messpads</text>
+<text x="1215" y="634" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="middle">GND 3V3 5V VBAT I_SENSE</text>
+<rect x="70" y="436" width="300" height="205" rx="6" fill="#fdf5f5" stroke="#c0392b" stroke-width="2" stroke-dasharray="5 4"/>
+<text x="88" y="460" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="bold" font-style="normal" fill="#c0392b" text-anchor="start">Detail A: Spannungsteiler</text>
+<line x1="110" y1="478" x2="110" y2="496" stroke="#c0392b" stroke-width="2"/>
+<text x="96" y="476" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#c0392b" text-anchor="end">VBAT</text>
+<rect x="100" y="496" width="20" height="34" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+<text x="132" y="517" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#111" text-anchor="start">R1 = 10 kΩ</text>
+<line x1="110" y1="530" x2="110" y2="552" stroke="#c0392b" stroke-width="2"/>
+<rect x="100" y="552" width="20" height="34" fill="#fff" stroke="#c0392b" stroke-width="2"/>
+<text x="132" y="573" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="normal" font-style="normal" fill="#111" text-anchor="start">R2 = 5,1 kΩ</text>
+<line x1="110" y1="586" x2="110" y2="600" stroke="#111" stroke-width="2"/>
+<line x1="96" y1="600" x2="124" y2="600" stroke="#111" stroke-width="2.5"/>
+<line x1="101" y1="605" x2="119" y2="605" stroke="#111" stroke-width="2"/>
+<line x1="106" y1="610" x2="114" y2="610" stroke="#111" stroke-width="2"/>
+<text x="132" y="604" font-family="Helvetica,Arial,sans-serif" font-size="11" font-weight="bold" font-style="normal" fill="#111" text-anchor="start">8,4 V × 0,338 = 2,84 V</text>
+<text x="132" y="624" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#555" text-anchor="start">C2 100 nF nach GND · ADC-Bereich 0–3,1 V</text>
+<polyline points="120,541 410,541 410,472 470,472" fill="none" stroke="#c0392b" stroke-width="2" marker-end="url(#ar)"/>
+<text x="196" y="534" font-family="Helvetica,Arial,sans-serif" font-size="10" font-weight="normal" font-style="normal" fill="#c0392b" text-anchor="start">VSENSE → D9 (GPIO8)</text>
+<text x="40" y="856" font-family="Helvetica,Arial,sans-serif" font-size="15" font-weight="bold" font-style="normal" fill="#111" text-anchor="start">Wichtig beim Aufbau</text>
+<text x="40" y="880" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#222" text-anchor="start">•  Akku und Motorphasen gehen direkt an den Regler. Die Platine zapft nur VBAT/GND ab — alle Bahnen darauf sind Kleinsignal.</text>
+<text x="40" y="900" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#222" text-anchor="start">•  D1 trennt Schaltregler und USB: der XIAO darf über beides versorgt werden, aber nicht rückspeisen. ~0,35 V Abfall sind unkritisch.</text>
+<text x="40" y="920" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#222" text-anchor="start">•  Sensoren an 3V3 des XIAO, Empfänger an 5 V. So kann man mit USB allein kalibrieren; zum Binden des Empfängers muss der Akku dran.</text>
+<text x="40" y="940" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#222" text-anchor="start">•  Kreiselmodul flach und starr in die Plattenmitte, Schaltregler weit davon weg. Barometer mit offenzelligem Schaumstoff abdecken.</text>
+<text x="40" y="960" font-family="Helvetica,Arial,sans-serif" font-size="12" font-weight="normal" font-style="normal" fill="#222" text-anchor="start">•  Einstellbare Reglermodule VOR dem Einbau auf 5,0 V trimmen und nachmessen — ein falsch eingestelltes Modul zerstört den XIAO.</text>
+</svg>
