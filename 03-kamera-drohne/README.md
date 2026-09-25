@@ -27,6 +27,7 @@ die auf der CNC-Fräse 1310 hergestellt wird. Motoren und Regler sind bestellt
 | [`03-elektronik.md`](03-elektronik.md) | XIAO ESP32-S3, ESP-FC, Pinbelegung, Fernsteuerung |
 | [`04-traegerplatine.md`](04-traegerplatine.md) | Die eigene Platine: Entwurf, Schaltplan, Bauteile |
 | [`05-bestellliste.md`](05-bestellliste.md) | Was bestellt ist, was noch fehlt |
+| [`06-bauplan.md`](06-bauplan.md) | Alle Schritte von der Bestellung bis zum ersten Flug |
 
 ## Die sechs Entscheidungen, um die es geht
 
