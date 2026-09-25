@@ -224,7 +224,9 @@ aktiv-niedrig schaltet, stellt man mit `buzzer_inverted` ein.
   Quadrocopters und flach aufliegend. Nicht an den Rand, nicht auf lange Stiftleisten.
 - **Den Schaltregler weit weg vom Kreisel** — er schaltet mit einigen hundert Kilohertz und
   strahlt ein.
-- Platinengröße etwa **40 × 40 mm**, Lochbild 20 × 20 mm mittig.
+- Platinengröße etwa **40 × 40 mm**, Lochbild 20 × 20 mm mittig. **Achtung:** Die Ecken liegen
+  unter den Propellern (siehe [`cad/`](cad/)). Außerhalb von 17,5 mm um die Mitte muss die
+  Platine flach bleiben und unter der Propellerebene liegen; der XIAO gehört in die Mitte.
 - **Auf 1,0 mm FR4 fräsen statt 1,6 mm** — spart rund 1,8 g.
 
 ## Gewicht, ehrlich gerechnet

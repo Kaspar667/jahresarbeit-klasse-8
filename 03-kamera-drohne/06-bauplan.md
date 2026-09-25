@@ -11,9 +11,9 @@ wird später die schriftliche Arbeit.
 
 - [ ] **1. Kohlefaserplatte messen.** Soll 2,5 mm dick sein, Messschieber an mehreren
       Stellen.
-- [ ] **2. Rahmen im CAD zeichnen** (z.B. Fusion 360 oder FreeCAD): 90 × 90 mm,
-      Motorachsen 7,5 mm vom Rand, Motorlöcher 9 × 9 mm M2, in der Mitte 20 × 20 mm für den
-      Regler, runde Übergänge an den Armen, vorne Platz für eine spätere Kamera.
+- [x] **2. Rahmen im CAD zeichnen.** Erster Entwurf liegt in [`cad/`](cad/) (STEP, DXF, STL).
+      In Fusion 360 oder FreeCAD öffnen und anschauen; Maße bei Bedarf in `rahmen.py`
+      ändern.
 - [ ] **3. Probefräsen in Holz oder MDF.** Billig, ungefährlich, und man sieht, ob Maße und
       Fräsprogramm stimmen, bevor die teure Kohlefaser dran ist. Probeweise einen Motor
       anschrauben, sobald er da ist.

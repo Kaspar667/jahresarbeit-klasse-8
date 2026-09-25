@@ -28,6 +28,7 @@ die auf der CNC-Fräse 1310 hergestellt wird. Motoren und Regler sind bestellt
 | [`04-traegerplatine.md`](04-traegerplatine.md) | Die eigene Platine: Entwurf, Schaltplan, Bauteile |
 | [`05-bestellliste.md`](05-bestellliste.md) | Was bestellt ist, was noch fehlt |
 | [`06-bauplan.md`](06-bauplan.md) | Alle Schritte von der Bestellung bis zum ersten Flug |
+| [`cad/`](cad/) | Rahmen als 3D-Modell (STEP, DXF zum Fräsen, STL) |
 
 ## Die sechs Entscheidungen, um die es geht
 

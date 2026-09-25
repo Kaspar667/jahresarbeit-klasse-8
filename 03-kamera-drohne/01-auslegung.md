@@ -92,8 +92,9 @@ besser für die Flugregelung.
   Motorwahl.
 - **Großzügige Ausrundungen** am Übergang Arm zu Rumpf, keine scharfen Innenecken. Dort
   brechen alle getesteten Rahmen zuerst.
-- Die Akkuzellen liegen oben mittig, im Halter mit Kupferkontakten (gemessen besser als
-  gekaufte Messingkontakte).
+- Die Akkuzellen hängen **unter** dem Rahmen, im Halter mit Kupferkontakten (gemessen besser
+  als gekaufte Messingkontakte), mit Klettgurt durch zwei Schlitze. Oben würden sie in die
+  Propeller ragen, das hat das CAD-Modell gezeigt. → [`cad/`](cad/)
 
 > **Warum 2,5 mm und nicht 2 mm:** Ein einteiliger 3-Zoll-Carbonrahmen riss in den
 > ausgewerteten Tests bei 2 mm Materialstärke **ohne echten Absturz** und wurde daraufhin
