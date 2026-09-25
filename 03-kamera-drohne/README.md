@@ -61,30 +61,30 @@ eigenes Projekt. Deshalb gestaffelt, und **jede Stufe fliegt für sich**:
 - **Stufe 2 — eigener Regler** mit der offenen AM32-Firmware.
 - **Stufe 3 — Gestensteuerung** über Raspberry Pi mit Kamera.
 
-## Offene Frage: Wo ist die Kamera?
+## Entschieden (25.09.2026): Kamera mit Live-Bild
 
-Der Projekttitel heißt „Kamera-Drohne", die aktuelle Auslegung enthält aber **keine
-Kamera** — eine FPV-Kamera samt Videosender wiegt rund 15 g, und 15 g kosten bei 160 g
-Abfluggewicht spürbar Flugzeit. Das ist eine bewusst offene Entscheidung, keine
-Vergesslichkeit. Drei Möglichkeiten:
+Der Projekttitel heißt „Kamera-Drohne", und die Kamera kommt jetzt auch dran:
+**analoges FPV** mit einer Nano-Kamera, einem kleinen 5,8-GHz-Videosender (25 mW) und einer
+**Videobrille mit Rekorder**. Damit gibt es ein Live-Bild und gleichzeitig eine Aufnahme.
 
-1. **Ohne Kamera fliegen, Kamera später nachrüsten.** Flugzeit bleibt maximal.
-2. **Leichte Aufnahmekamera mitnehmen** (z.B. eine „Naked GoPro" oder RunCam-Modul) —
-   nimmt auf, überträgt aber kein Live-Bild. Kein zweites Funksystem nötig.
-3. **Echte FPV-Ausrüstung** mit Live-Bild und Videobrille. Am teuersten, am schwersten,
-   aber das, was man sich unter einer Kamera-Drohne vorstellt.
+Die Abwägung war:
 
-Für Stufe 3 (Gestensteuerung) kommt die Kamera ohnehin ins Spiel — dort allerdings am
-**Boden**, auf einem Raspberry Pi, der Kaspars Handbewegungen erkennt und in Steuersignale
-übersetzt. Auch das wäre ein legitimer Weg, den Projekttitel einzulösen.
+1. **Ohne Kamera:** maximale Flugzeit, aber das Thema verfehlt.
+2. **Nur Aufnahmekamera:** kein Live-Bild, eine HD-Actioncam wiegt 10 g und mehr.
+3. **Analoges FPV** ← *gewählt*: ~8 g zusätzlich, Live-Bild, Aufnahme in der Brille.
 
-**Zu klären, bevor der Rahmen gefräst wird** — eine Kamera braucht Platz und eine
-Halterung.
+**Was es kostet:** ~8 g mehr und etwa 10 % Flugzeit (geschätzt ~10–16 min statt 11–18).
+Kamera und Sender hängen am 5-V-Ausgang der Trägerplatine und brauchen **keinen GPIO**,
+die Pinbelegung bleibt gleich. Dafür muss der 5-V-Regler stärker werden (≥ 1,5 A statt
+500 mA). Einzelheiten in [`05-bestellliste.md`](05-bestellliste.md).
+
+Für Stufe 3 (Gestensteuerung) kommt zusätzlich eine Kamera am **Boden** dazu, auf einem
+Raspberry Pi, der Kaspars Handbewegungen erkennt.
 
 ## Was als Nächstes passiert
 
 1. Dicke der vorhandenen Kohlefaserplatte prüfen (soll 2,5 mm sein).
-2. Rahmen in CAD zeichnen: 90 × 90 mm, Motorachsen 7,5 mm von den Kanten.
+2. Rahmen in CAD zeichnen: 90 × 90 mm, Motorachsen 7,5 mm von den Kanten, **mit Kamerahalter vorne**.
 3. Trägerplatine layouten und auf der 1310 fräsen.
-4. Fehlende Teile bestellen — das Kreiselmodul zuerst, ohne das fliegt nichts.
+4. Fehlende Teile nach der [Einkaufsliste](05-bestellliste.md) bestellen, das Kreiselmodul zuerst, ohne das fliegt nichts.
 5. Ersten Rahmen fräsen und die Steifigkeit messen (Zielwert unter 6 mm Auslenkung).

@@ -1,41 +1,119 @@
 # Bestellliste
 
-*Stand 23.09.2026. Lieferzeit aus China erfahrungsgemäß zwei bis drei Wochen — das gehört
-in die Zeitplanung der Jahresarbeit.*
+*Stand 25.09.2026, jetzt **mit Kamera** (analoges FPV: Live-Bild in der Videobrille, Aufnahme
+über den Rekorder in der Brille). Lieferzeit aus China erfahrungsgemäß zwei bis drei Wochen,
+bei deutschen FPV-Händlern (FPV24, Quadmula, n-Factory) wenige Tage, dafür etwas teurer.*
+
+Preise sind grobe Richtwerte.
 
 ## Bestellt
 
-- [x] **4 × Happymodel EX1204, 6500 KV** — AliExpress (DronePartsPro), 36,39 € + 4,86 € Versand
-- [x] **2 × HAKRC 4-in-1-Regler 15 A, 2–4S, 20 × 20 mm** — AliExpress (Wing Pules Model),
+- [x] **4 × Happymodel EX1204, 6500 KV**: AliExpress (DronePartsPro), 36,39 € + 4,86 € Versand
+- [x] **2 × HAKRC 4-in-1-Regler 15 A, 2–4S, 20 × 20 mm**: AliExpress (Wing Pules Model),
       20,99 € + 4,35 € Versand
 
 > **Bei Ankunft prüfen:** Motoren müssen **6500 KV** sein (nicht 5000 KV), Regler **15 A**
 > (nicht 25 A), und vier Motoren im Karton.
 
-Damit ist der Antrieb vollständig. Was fehlt, ist die Steuerungsseite.
+## Einkaufsliste
 
-## Noch offen
+### 1. Sensoren und Flugrechner: zuerst bestellen, ohne die fliegt nichts
 
-| Teil | Hinweis |
-|---|---|
-| **MPU-6050-Modul** (Kreisel) | **ohne den fliegt nichts** — der XIAO hat keinen Sensor an Bord |
-| **BMP280-Modul** (Barometer) | für die Höhenhaltung |
-| **HQProp T2.8×1.6×3 (2816)**, 1,5-mm-Bohrung | 6 Paar, **CW und CCW** |
-| **ELRS-Empfänger** 2,4 GHz (CRSF) | ~10–15 € |
-| **ELRS-Sender**, z.B. RadioMaster Pocket | ~100 €, der größte Einzelposten |
-| **2 × 18650**: Eve 30PL oder Ampace JP30 | nur diese beiden schaffen die ~36 A |
-| Zellhalter für zwei 18650 in Reihe | mit **Kupferkontakten** |
-| Ladegerät für 18650 | |
-| XIAO ESP32-S3 | falls nicht aus dem ESP-FLY-Bausatz übernommen |
-| 5-V-Schaltregler + Schottky-Diode | für die Trägerplatine |
-| Kondensator 220–470 µF / 25 V, Low-ESR | direkt an die Akkupads des Reglers |
-| Widerstände 10 kΩ / 5,1 kΩ, Summer | Spannungsteiler und Warntongeber |
-| XT30-Stecker, Silikonlitze | |
-| M2-Schrauben und Abstandshülsen | Motoren (9 × 9) und Regler (20 × 20) |
-| Kohlefaserplatte 2,5 mm | **Dicke der vorhandenen prüfen** |
+| ✓ | Teil | Worauf achten | ca. |
+|---|---|---|---|
+| [ ] | **MPU-6050-Modul (GY-521)** | 2–3 Stück kaufen, sind billig und gehen beim Löten gern kaputt | 3–8 € |
+| [ ] | **BMP280-Modul, I2C, 3,3 V** | nicht BME280/BMP180 verwechseln; 2–3 Stück | 3–8 € |
+| [ ] | **Seeed XIAO ESP32-S3** | neu kaufen, dann bleibt die ESP-FLY flugfähig | ~9 € |
 
-> **Das Kreiselmodul ist der Posten, den man am leichtesten vergisst und der am sichersten
-> alles aufhält.** Zuerst bestellen.
+### 2. Fernsteuerung (ELRS 2,4 GHz)
+
+| ✓ | Teil | Worauf achten | ca. |
+|---|---|---|---|
+| [ ] | **RadioMaster Pocket, ELRS-Version** | **nicht** die CC2500-Version | 70–100 € |
+| [ ] | **2 × 18650 für die Pocket** | die Pocket läuft mit 18650-Zellen, die sind nicht dabei; normale Qualitätszellen reichen hier | ~10 € |
+| [ ] | **ELRS-Empfänger 2,4 GHz**, z.B. RadioMaster RP1 oder Happymodel EP2 | **5-V-tauglich** (Datenblatt!), 2,4 GHz wie der Sender | 10–15 € |
+
+### 3. Kamera und Video (neu)
+
+| ✓ | Teil | Worauf achten | ca. |
+|---|---|---|---|
+| [ ] | **Analoge FPV-Kamera, Nano-Größe (14 mm)**, z.B. Caddx Ant | Eingang muss **5 V** können; ~2 g | 15–20 € |
+| [ ] | **Kleiner 5,8-GHz-Videosender (VTX)** | Eingang **5 V**, **auf 25 mW einstellbar** (in Deutschland das Maximum), Kanal per **Taste** einstellbar | 15–20 € |
+| [ ] | **5,8-GHz-Antenne** | **Stecker muss zum VTX passen** (meist U.FL/IPEX) | ~5 € |
+| [ ] | **Videobrille mit Rekorder (DVR)**, z.B. Eachine EV800D | analog 5,8 GHz, **mit DVR**, dann wird das Video gleich aufgenommen | 80–100 € |
+
+> **Warum diese Kombination zusammenpasst:**
+> - Kamera und VTX hängen am **5-V-Ausgang unserer Platine**. Dadurch braucht die Kamera
+>   **keinen einzigen GPIO**, die Pinbelegung des XIAO bleibt unverändert.
+> - Der VTX wird per Taste eingestellt, nicht per SmartAudio, weil SmartAudio einen freien
+>   UART bräuchte, und den haben wir nicht.
+> - Kein Bildschirm-Overlay (OSD) im Video: ESP-FC hat dafür keinen Chip. Die Akkuspannung
+>   kommt stattdessen über die ELRS-Telemetrie auf das Display der Pocket.
+> - Video läuft auf **5,8 GHz**, Fernsteuerung und ESP-NOW auf **2,4 GHz**, also stören sie
+>   sich nicht gegenseitig.
+
+### 4. Akku und Laden
+
+| ✓ | Teil | Worauf achten | ca. |
+|---|---|---|---|
+| [ ] | **4 × 18650 Eve 30PL oder Ampace JP30** | **nur diese beiden** schaffen die ~36 A; 4 Stück = 2 Sätze zum Wechseln | 25–35 € |
+| [ ] | **Zellhalter 2 × 18650 in Reihe** | mit **Kupferkontakten**, leicht | ~5 € |
+| [ ] | **Ladegerät für 18650**, 4 Schächte (z.B. XTAR, Nitecore) | Zellen **einzeln** laden, dann sind sie automatisch ausgeglichen | 20–30 € |
+
+### 5. Trägerplatine
+
+| ✓ | Teil | Worauf achten | ca. |
+|---|---|---|---|
+| [ ] | **5-V-Schaltregler, fest 5 V, mind. 1,5 A**, z.B. Pololu D24V22F5 | **Geändert wegen der Kamera:** der alte 500-mA-Regler reicht nicht mehr, siehe unten | ~12 € |
+| [ ] | Schottky-Diode SS14 / B5819W | | |
+| [ ] | MOSFET 2N7002 (SOT-23) | für den Summer | |
+| [ ] | Widerstände 0805: 10 kΩ (2×), 5,1 kΩ, 100 Ω | Spannungsteiler, Gate | |
+| [ ] | Kondensatoren 0805: 100 nF, 10 µF | | |
+| [ ] | **Elko 470 µF / 25 V, Low-ESR** | an die Akkupads des Reglers | ~1 € |
+| [ ] | Summer, **aktiv**, 5 V, 12 mm | aktiv = macht den Ton selbst | ~1 € |
+| [ ] | Buchsenleisten 2 × 7-polig, Stiftleisten 2,54 mm | für den steckbaren XIAO | ~3 € |
+| [ ] | **Platinenmaterial FR4, einseitig, 1,0 mm** | 1,0 statt 1,6 mm spart ~1,8 g | ~5 € |
+|  | *Kleinteile zusammen* | am besten bei einem Elektronikhändler in einer Bestellung | ~10 € |
+
+### 6. Propeller, Kabel, Schrauben
+
+| ✓ | Teil | Worauf achten | ca. |
+|---|---|---|---|
+| [ ] | **HQProp T2.8×1.6×3 (2816), 1,5-mm-Bohrung** | **6 Paar, CW und CCW**, genau daran ist Schritt 1 gescheitert | ~15 € |
+| [ ] | XT30-Stecker (Paare) | | ~5 € |
+| [ ] | Silikonlitze 18 AWG (Akku) und 26–28 AWG (Signal) | | ~5 € |
+| [ ] | M2-Schrauben, M2-Abstandshülsen, **Gummitüllen** | Motoren 9 × 9, Regler 20 × 20, Softmount | ~10 € |
+| [ ] | Flüssiges Isolierband, Schrumpfschlauch | Kohlefaser leitet Strom! | ~10 € |
+| [ ] | **Smoke-Stopper** (oder Sicherung) fürs erste Einschalten | verhindert, dass ein Lötfehler gleich alles abbrennt | ~10 € |
+| [ ] | Kohlefaserplatte 2,5 mm | **nur falls die vorhandene nicht 2,5 mm dick ist** | |
+
+### Summe
+
+Grob **380–420 €**. Die zwei großen Posten sind Fernsteuerung (~85 €) und Videobrille
+(~90 €), die sind aber auch für spätere Projekte weiter nutzbar.
+
+## Was die Kamera am Entwurf ändert
+
+| | vorher | mit Kamera |
+|---|---|---|
+| Strombedarf 5 V | ~300 mA | ~800 mA (VTX ~400 mA, Kamera ~150 mA) |
+| 5-V-Regler | ≥ 500 mA | **≥ 1,5 A** |
+| Trägerplatine | – | zusätzlicher Stecker **J5: 5 V, GND** für Kamera + VTX, Regler weit weg vom Kreisel |
+| Gewicht | ~164 g | **~172 g** (Kamera ~2 g, VTX ~3 g, Antenne ~1 g, Halter/Kabel ~2 g) |
+| Flugzeit (geschätzt) | 11–18 min | **~10–16 min** |
+
+Die Rechnung: Schwebeleistung wächst mit Masse^1,5, also (172/164)^1,5 ≈ 1,07. Dazu kommen
+etwa 2 W für Kamera und Sender. Zusammen rund 10 % weniger Flugzeit.
+
+## Vorschriften (mit den Eltern klären)
+
+- **Mit Kamera muss der Betreiber registriert sein**, auch unter 250 g. Das geht online beim
+  Luftfahrt-Bundesamt (LBA); bei Minderjährigen machen das die Eltern. Die Nummer kommt als
+  Aufkleber an die Drohne.
+- **Drohnen-Haftpflichtversicherung** ist in Deutschland Pflicht, für jede Drohne.
+- **Mit Videobrille fliegen nur mit einem Beobachter** daneben, der die Drohne direkt sieht.
+- **Videosender auf 25 mW stellen.** Mehr ist in Deutschland ohne Amateurfunklizenz nicht
+  erlaubt.
 
 ## Was „ESP-FC-kompatibel" überhaupt heißt
 
@@ -48,7 +126,7 @@ Firmware  ->  Regler  ->  Motor
 
 **Nur der Regler spricht mit der Firmware.** Der Motor sieht lediglich drei Phasen vom
 Regler und weiß nichts davon, welche Software im Flugrechner läuft. „Ist dieser Motor mit
-ESP-FC kompatibel?" ist deshalb keine sinnvolle Frage — bei Motoren zählen KV-Zahl zur
+ESP-FC kompatibel?" ist deshalb keine sinnvolle Frage. Bei Motoren zählen KV-Zahl zur
 Zellenzahl, Lochbild und Wellendurchmesser.
 
 - **HAKRC 15A 4-in-1:** BLHeli_S auf EFM8BB21, DShot600 → **ja, kompatibel**, am
@@ -64,7 +142,9 @@ Zellenzahl, Lochbild und Wellendurchmesser.
   Phasenleitungen.
 - **Bei den Propellern brauchen wir dagegen beide Drehrichtungen.** Genau daran ist der
   Holz-Bausatz aus Schritt 1 gescheitert.
-- **Ersatz mitbestellen, wo es billig ist:** Propeller, ein fünfter Motor, der zweite
-  Regler (ist schon drin). Der erste Absturz kommt bestimmt.
+- **Ersatz mitbestellen, wo es billig ist:** Propeller, Sensormodule, ein fünfter Motor, der
+  zweite Regler (ist schon drin). Der erste Absturz kommt bestimmt.
+- **Bei Kamera, VTX und Antenne vor dem Kauf prüfen:** Eingangsspannung 5 V möglich?
+  Antennenstecker passend? Das sind die zwei häufigsten Fehlkäufe.
 - Zwei verschiedene Verkäufer heißt zwei Sendungen, zwei Versandkosten und
   unterschiedliche Ankunftszeiten.
