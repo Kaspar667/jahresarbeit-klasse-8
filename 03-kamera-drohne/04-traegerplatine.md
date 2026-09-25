@@ -154,7 +154,7 @@ Kleinleistungsbahnen.
 | U1 | XIAO ESP32-S3 | — | auf 2 × 7-polige Buchsenleisten 2,54 mm, steckbar |
 | U2 | Kreiselmodul | MPU-6050 (GY-521) | 8-polig, flach und starr auflöten |
 | U3 | Barometermodul | BMP280, I2C-Ausführung | 4-polig |
-| U4 | Abwärtsregler | 5 V fest, **≥ 1,5 A** | z.B. Pololu D24V22F5; wegen Kamera + Videosender nicht mehr der 500-mA-Typ |
+| U4 | Abwärtsregler | 5 V fest, **≥ 1,5 A** | z.B. Pololu D24V22F5; Reserve für die spätere Kamera + Videosender |
 | D1 | Schottkydiode | SS14 / B5819W | im 5-V-Zweig zum XIAO |
 | D2 | Freilaufdiode | 1N4148 | nur bei magnetischem Summer nötig |
 | Q1 | N-Kanal-MOSFET | 2N7002, SOT-23 | schaltet den Summer |
@@ -170,7 +170,7 @@ Kleinleistungsbahnen.
 | J2 | Stiftleiste | 6-polig 2,54 | zum Regler: S1–S4, GND, I_SENSE |
 | J3 | Stiftleiste | 4-polig 2,54 | ELRS: 5V, GND, TX, RX |
 | J4 | Lötpads | 4-polig, **unbestückt** | GPS für später |
-| J5 | Stiftleiste | 2-polig 2,54 | Kamera + Videosender: 5V, GND |
+| J5 | Stiftleiste | 2-polig 2,54 | für die spätere Kamera + Videosender: 5V, GND |
 | SJ1 | Lötbrücke | — | D10 wahlweise auf Summer **oder** GPS-TX |
 | TP1–TP5 | Messpads | — | GND, 3V3, 5V, VBAT, I_SENSE |
 | — | Bohrungen | 4 × Ø2,2 mm, Raster 20 × 20 mm | M2, passend zum Regler |

@@ -61,30 +61,25 @@ eigenes Projekt. Deshalb gestaffelt, und **jede Stufe fliegt für sich**:
 - **Stufe 2 — eigener Regler** mit der offenen AM32-Firmware.
 - **Stufe 3 — Gestensteuerung** über Raspberry Pi mit Kamera.
 
-## Entschieden (25.09.2026): Kamera mit Live-Bild
+## Die Kamera: erst später (Stand 25.09.2026)
 
-Der Projekttitel heißt „Kamera-Drohne", und die Kamera kommt jetzt auch dran:
-**analoges FPV** mit einer Nano-Kamera, einem kleinen 5,8-GHz-Videosender (25 mW) und einer
-**Videobrille mit Rekorder**. Damit gibt es ein Live-Bild und gleichzeitig eine Aufnahme.
+Der Projekttitel heißt „Kamera-Drohne", **Version 1 fliegt aber bewusst ohne Kamera.** Erst
+soll das Fluggerät selbst sauber fliegen, dann kommt die Kamera dazu. Geplant ist dann
+**analoges FPV**: Nano-Kamera, 5,8-GHz-Videosender (25 mW), Videobrille mit Rekorder.
+Das kostet ~8 g und etwa 10 % Flugzeit.
 
-Die Abwägung war:
+Damit das später ohne Umbau geht, bekommt die Trägerplatine **schon jetzt** einen stärkeren
+5-V-Regler (≥ 1,5 A) und einen Anschluss für Kamera und Sender. Kamera und Sender brauchen
+keinen GPIO, die Pinbelegung bleibt gleich. Einzelheiten in
+[`05-bestellliste.md`](05-bestellliste.md).
 
-1. **Ohne Kamera:** maximale Flugzeit, aber das Thema verfehlt.
-2. **Nur Aufnahmekamera:** kein Live-Bild, eine HD-Actioncam wiegt 10 g und mehr.
-3. **Analoges FPV** ← *gewählt*: ~8 g zusätzlich, Live-Bild, Aufnahme in der Brille.
-
-**Was es kostet:** ~8 g mehr und etwa 10 % Flugzeit (geschätzt ~10–16 min statt 11–18).
-Kamera und Sender hängen am 5-V-Ausgang der Trägerplatine und brauchen **keinen GPIO**,
-die Pinbelegung bleibt gleich. Dafür muss der 5-V-Regler stärker werden (≥ 1,5 A statt
-500 mA). Einzelheiten in [`05-bestellliste.md`](05-bestellliste.md).
-
-Für Stufe 3 (Gestensteuerung) kommt zusätzlich eine Kamera am **Boden** dazu, auf einem
+Für Stufe 3 (Gestensteuerung) kommt ohnehin eine Kamera am **Boden** dazu, auf einem
 Raspberry Pi, der Kaspars Handbewegungen erkennt.
 
 ## Was als Nächstes passiert
 
 1. Dicke der vorhandenen Kohlefaserplatte prüfen (soll 2,5 mm sein).
-2. Rahmen in CAD zeichnen: 90 × 90 mm, Motorachsen 7,5 mm von den Kanten, **mit Kamerahalter vorne**.
+2. Rahmen in CAD zeichnen: 90 × 90 mm, Motorachsen 7,5 mm von den Kanten, vorne Platz für einen späteren Kamerahalter lassen.
 3. Trägerplatine layouten und auf der 1310 fräsen.
 4. Fehlende Teile nach der [Einkaufsliste](05-bestellliste.md) bestellen, das Kreiselmodul zuerst, ohne das fliegt nichts.
 5. Ersten Rahmen fräsen und die Steifigkeit messen (Zielwert unter 6 mm Auslenkung).
